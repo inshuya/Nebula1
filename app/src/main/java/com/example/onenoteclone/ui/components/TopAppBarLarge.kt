@@ -17,7 +17,7 @@ import androidx.compose.ui.unit.dp
 import com.example.onenoteclone.ui.theme.OneNoteCloneTheme
 
 /**
- * Large top app bar with gradient background matching the reference design
+ * Large top app bar with neutral background matching the reference design
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -30,7 +30,7 @@ fun TopAppBarLarge(
             Icon(
                 imageVector = Icons.Default.MoreVert,
                 contentDescription = "More options",
-                tint = Color.White
+                tint = MaterialTheme.colorScheme.onSurface
             )
         }
     }
@@ -40,12 +40,7 @@ fun TopAppBarLarge(
             .fillMaxWidth()
             .height(120.dp)
             .background(
-                brush = Brush.verticalGradient(
-                    colors = listOf(
-                        MaterialTheme.colorScheme.primary,
-                        MaterialTheme.colorScheme.primary.copy(alpha = 0.8f)
-                    )
-                )
+                color = MaterialTheme.colorScheme.surface
             )
     ) {
         Row(
@@ -66,7 +61,7 @@ fun TopAppBarLarge(
                     text = title,
                     style = MaterialTheme.typography.headlineMedium.copy(
                         fontWeight = FontWeight.Bold,
-                        color = Color.White
+                        color = MaterialTheme.colorScheme.onSurface
                     ),
                     modifier = Modifier.padding(start = if (navigationIcon != {}) 16.dp else 0.dp),
                     textAlign = TextAlign.Start

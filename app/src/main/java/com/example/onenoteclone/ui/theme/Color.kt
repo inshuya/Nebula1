@@ -2,52 +2,54 @@ package com.example.onenoteclone.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
-// Primary Purple
-val Purple500 = Color(0xFF7B2CF5)
-val Purple700 = Color(0xFF5A1FB3)
-val Purple200 = Color(0xFFB794F6)
+// Primary Purple - Updated to match reference exactly
+val Purple500 = Color(0xFF8B5CF6) // Vibrant purple primary
+val Purple700 = Color(0xFF7719AA) // Updated dark purple as requested
+val Purple200 = Color(0xFFC4B5FD) // Light vibrant purple
+val Purple900 = Color(0xFF581C87) // Very deep purple
+val Purple100 = Color(0xFFE9D5FF) // Very light purple
 
 // Light Theme Colors
 val LightPrimary = Purple500
 val LightOnPrimary = Color.White
-val LightPrimaryContainer = Color(0xFFF3E8FF)
-val LightOnPrimaryContainer = Color(0xFF2E1065)
+val LightPrimaryContainer = Purple100 // Use very light purple
+val LightOnPrimaryContainer = Purple900 // Use very deep purple
 
-val LightSecondary = Color(0xFF6B5B95)
+val LightSecondary = Purple700 // Use deeper purple for secondary
 val LightOnSecondary = Color.White
-val LightSecondaryContainer = Color(0xFFE9DEF0)
-val LightOnSecondaryContainer = Color(0xFF1D192B)
+val LightSecondaryContainer = Purple100 // Light purple container
+val LightOnSecondaryContainer = Purple900
 
 val LightBackground = Color(0xFFFFFBFE)
 val LightOnBackground = Color(0xFF1C1B1F)
 val LightSurface = Color.White
 val LightOnSurface = Color(0xFF1C1B1F)
-val LightSurfaceVariant = Color(0xFFE7E0EC)
-val LightOnSurfaceVariant = Color(0xFF49454F)
+val LightSurfaceVariant = Color(0xFFE7E0EC) // Back to neutral gray
+val LightOnSurfaceVariant = Color(0xFF49454F) // Back to neutral gray
 
-val LightOutline = Color(0xFF79747E)
-val LightOutlineVariant = Color(0xFFCAC4D0)
+val LightOutline = Color(0xFF79747E) // Back to neutral gray
+val LightOutlineVariant = Color(0xFFCAC4D0) // Back to neutral gray
 
 // Dark Theme Colors
 val DarkPrimary = Purple200
-val DarkOnPrimary = Color(0xFF2E1065)
-val DarkPrimaryContainer = Color(0xFF5A1FB3)
-val DarkOnPrimaryContainer = Color(0xFFE9DEF0)
+val DarkOnPrimary = Purple900
+val DarkPrimaryContainer = Purple700 // Vibrant purple for dark theme
+val DarkOnPrimaryContainer = Purple100
 
-val DarkSecondary = Color(0xFFCBC2DB)
-val DarkOnSecondary = Color(0xFF332D41)
-val DarkSecondaryContainer = Color(0xFF4A4458)
-val DarkOnSecondaryContainer = Color(0xFFE9DEF0)
+val DarkSecondary = Purple200
+val DarkOnSecondary = Purple900
+val DarkSecondaryContainer = Purple700
+val DarkOnSecondaryContainer = Purple100
 
 val DarkBackground = Color(0xFF1C1B1F)
 val DarkOnBackground = Color(0xFFE6E1E5)
 val DarkSurface = Color(0xFF1C1B1F)
 val DarkOnSurface = Color(0xFFE6E1E5)
-val DarkSurfaceVariant = Color(0xFF49454F)
-val DarkOnSurfaceVariant = Color(0xFFCAC4D0)
+val DarkSurfaceVariant = Color(0xFF49454F) // Back to neutral gray
+val DarkOnSurfaceVariant = Color(0xFFCAC4D0) // Back to neutral gray
 
-val DarkOutline = Color(0xFF938F99)
-val DarkOutlineVariant = Color(0xFF49454F)
+val DarkOutline = Color(0xFF938F99) // Back to neutral gray
+val DarkOutlineVariant = Color(0xFF49454F) // Back to neutral gray
 
 // Custom Colors for Sticky Notes
 val StickyYellow = Color(0xFFFFF59D)

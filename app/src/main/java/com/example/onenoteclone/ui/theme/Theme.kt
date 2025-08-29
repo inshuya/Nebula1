@@ -10,6 +10,7 @@ import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.SideEffect
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
@@ -24,6 +25,10 @@ private val DarkColorScheme = darkColorScheme(
     onSecondary = DarkOnSecondary,
     secondaryContainer = DarkSecondaryContainer,
     onSecondaryContainer = DarkOnSecondaryContainer,
+    tertiary = Purple200, // Add tertiary purple for dark theme
+    onTertiary = Purple900,
+    tertiaryContainer = Purple700,
+    onTertiaryContainer = Purple100,
     background = DarkBackground,
     onBackground = DarkOnBackground,
     surface = DarkSurface,
@@ -47,6 +52,10 @@ private val LightColorScheme = lightColorScheme(
     onSecondary = LightOnSecondary,
     secondaryContainer = LightSecondaryContainer,
     onSecondaryContainer = LightOnSecondaryContainer,
+    tertiary = Purple700, // Add tertiary purple
+    onTertiary = Color.White,
+    tertiaryContainer = Purple100,
+    onTertiaryContainer = Purple900,
     background = LightBackground,
     onBackground = LightOnBackground,
     surface = LightSurface,
@@ -65,7 +74,7 @@ private val LightColorScheme = lightColorScheme(
 fun OneNoteCloneTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     // Dynamic color is available on Android 12+
-    dynamicColor: Boolean = true,
+    dynamicColor: Boolean = false, // Disabled to use our custom purple theme
     content: @Composable () -> Unit
 ) {
     val colorScheme = when {
