@@ -1,0 +1,310 @@
+C:\Users\imuthukumar\.gradle\caches\9.0-milestone-1\transforms\8e890f16398b49d461988e9887869dc9\transformed\runtime-release\jars\lint.jar: Warning: Library lint checks reference invalid APIs; these checks will be skipped!
+
+Lint found an issue registry (androidx.compose.runtime.lint.RuntimeIssueRegistry)
+which contains some references to invalid API:
+org.jetbrains.kotlin.analysis.api.session.KtAnalysisSessionProvider: org.jetbrains.kotlin.analysis.api.lifetime.KtLifetimeTokenFactory getTokenFactory()
+(Referenced from androidx/compose/runtime/lint/AutoboxingStateCreationDetector.class)
+
+Therefore, this lint check library is not included
+in analysis. This affects the following lint checks:
+AutoboxingStateValueProperty
+AutoboxingStateCreation
+CoroutineCreationDuringComposition
+FlowOperatorInvokedInComposition
+ComposableLambdaParameterNaming
+ComposableLambdaParameterPosition
+ComposableNaming
+StateFlowValueCalledInComposition
+CompositionLocalNaming
+MutableCollectionMutableState
+ProduceStateDoesNotAssignValue
+RememberReturnType
+OpaqueUnitKey
+UnrememberedMutableState
+
+To use this lint check, upgrade to a more recent version
+of the library. [ObsoleteLintCustomCheck]
+
+   Explanation for issues of type "ObsoleteLintCustomCheck":
+   Lint can be extended with "custom checks": additional checks implemented by
+   developers and libraries to for example enforce specific API usages
+   required by a library or a company coding style guideline.
+
+   The Lint APIs are not yet stable, so these checks may either cause a
+   performance degradation, or stop working, or provide wrong results.
+
+   This warning flags custom lint checks that are found to be using obsolete
+   APIs and will need to be updated to run in the current lint environment.
+
+   It may also flag issues found to be using a newer version of the API,
+   meaning that you need to use a newer version of lint (or Android Studio or
+   Gradle plugin etc) to work with these checks.
+
+C:\Users\imuthukumar\Documents\CPNB\Nebula\FinalProject\app\build.gradle.kts:14: Warning: Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the android.os.Build.VERSION_CODES javadoc for details. [OldTargetApi]
+        targetSdk = 34
+        ~~~~~~~~~~~~~~
+
+   Explanation for issues of type "OldTargetApi":
+   When your application runs on a version of Android that is more recent than
+   your targetSdkVersion specifies that it has been tested with, various
+   compatibility modes kick in. This ensures that your application continues
+   to work, but it may look out of place. For example, if the targetSdkVersion
+   is less than 14, your app may get an option button in the UI.
+
+   To fix this issue, set the targetSdkVersion to the highest available value.
+   Then test your app to make sure everything works correctly. You may want to
+   consult the compatibility notes to see what changes apply to each version
+   you are adding support for:
+   https://developer.android.com/reference/android/os/Build.VERSION_CODES.html
+   as well as follow this guide:
+   https://developer.android.com/distribute/best-practices/develop/target-sdk.
+   html
+
+   https://developer.android.com/distribute/best-practices/develop/target-sdk.html
+
+C:\Users\imuthukumar\Documents\CPNB\Nebula\FinalProject\app\build.gradle.kts:58: Warning: A newer version of androidx.core:core-ktx than 1.12.0 is available: 1.17.0 [GradleDependency]
+    implementation("androidx.core:core-ktx:1.12.0")
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\imuthukumar\Documents\CPNB\Nebula\FinalProject\app\build.gradle.kts:59: Warning: A newer version of androidx.appcompat:appcompat than 1.6.1 is available: 1.7.1 [GradleDependency]
+    implementation("androidx.appcompat:appcompat:1.6.1")
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\imuthukumar\Documents\CPNB\Nebula\FinalProject\app\build.gradle.kts:60: Warning: A newer version of com.google.android.material:material than 1.11.0 is available: 1.12.0 [GradleDependency]
+    implementation("com.google.android.material:material:1.11.0")
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\imuthukumar\Documents\CPNB\Nebula\FinalProject\app\build.gradle.kts:61: Warning: A newer version of androidx.lifecycle:lifecycle-runtime-ktx than 2.7.0 is available: 2.9.2 [GradleDependency]
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\imuthukumar\Documents\CPNB\Nebula\FinalProject\app\build.gradle.kts:62: Warning: A newer version of androidx.activity:activity-compose than 1.8.2 is available: 1.10.1 [GradleDependency]
+    implementation("androidx.activity:activity-compose:1.8.2")
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\imuthukumar\Documents\CPNB\Nebula\FinalProject\app\build.gradle.kts:72: Warning: A newer version of androidx.navigation:navigation-compose than 2.7.6 is available: 2.9.3 [GradleDependency]
+    implementation("androidx.navigation:navigation-compose:2.7.6")
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\imuthukumar\Documents\CPNB\Nebula\FinalProject\app\build.gradle.kts:75: Warning: A newer version of androidx.lifecycle:lifecycle-viewmodel-compose than 2.7.0 is available: 2.9.2 [GradleDependency]
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0")
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\imuthukumar\Documents\CPNB\Nebula\FinalProject\app\build.gradle.kts:91: Warning: A newer version of androidx.test.ext:junit than 1.1.5 is available: 1.3.0 [GradleDependency]
+    androidTestImplementation("androidx.test.ext:junit:1.1.5")
+                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\imuthukumar\Documents\CPNB\Nebula\FinalProject\app\build.gradle.kts:92: Warning: A newer version of androidx.test.espresso:espresso-core than 3.5.1 is available: 3.7.0 [GradleDependency]
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "GradleDependency":
+   This detector looks for usages of libraries where the version you are using
+   is not the current stable release. Using older versions is fine, and there
+   are cases where you deliberately want to stick with an older version.
+   However, you may simply not be aware that a more recent version is
+   available, and that is what this lint check helps find.
+
+C:\Users\imuthukumar\Documents\CPNB\Nebula\FinalProject\app\src\main\java\com\example\onenoteclone\ui\components\Avatar.kt:30: Warning: Modifier parameter should be the first optional parameter [ModifierParameter from androidx.compose.ui]
+    modifier: Modifier = Modifier
+    ~~~~~~~~
+C:\Users\imuthukumar\Documents\CPNB\Nebula\FinalProject\app\src\main\java\com\example\onenoteclone\ui\components\Avatar.kt:69: Warning: Modifier parameter should be the first optional parameter [ModifierParameter from androidx.compose.ui]
+    modifier: Modifier = Modifier
+    ~~~~~~~~
+C:\Users\imuthukumar\Documents\CPNB\Nebula\FinalProject\app\src\main\java\com\example\onenoteclone\ui\components\MiniNotebookCard.kt:36: Warning: Modifier parameter should be the first optional parameter [ModifierParameter from androidx.compose.ui]
+    modifier: Modifier = Modifier
+    ~~~~~~~~
+C:\Users\imuthukumar\Documents\CPNB\Nebula\FinalProject\app\src\main\java\com\example\onenoteclone\ui\components\NotebookListItem.kt:45: Warning: Modifier parameter should be the first optional parameter [ModifierParameter from androidx.compose.ui]
+    modifier: Modifier = Modifier
+    ~~~~~~~~
+C:\Users\imuthukumar\Documents\CPNB\Nebula\FinalProject\app\src\main\java\com\example\onenoteclone\ui\components\SearchField.kt:30: Warning: Modifier parameter should be the first optional parameter [ModifierParameter from androidx.compose.ui]
+    modifier: Modifier = Modifier
+    ~~~~~~~~
+C:\Users\imuthukumar\Documents\CPNB\Nebula\FinalProject\app\src\main\java\com\example\onenoteclone\ui\components\StickyNoteCard.kt:38: Warning: Modifier parameter should be the first optional parameter [ModifierParameter from androidx.compose.ui]
+    modifier: Modifier = Modifier
+    ~~~~~~~~
+
+   Explanation for issues of type "ModifierParameter":
+   The first (or only) Modifier parameter in a Composable function should
+   follow the following rules:
+   - Be named modifier
+   - Have a type of Modifier
+   - Either have no default value, or have a default value of Modifier
+   - If optional, be the first optional parameter in the parameter list
+
+   Vendor: Jetpack Compose
+   Identifier: androidx.compose.ui
+   Feedback: https://issuetracker.google.com/issues/new?component=612128
+
+C:\Users\imuthukumar\Documents\CPNB\Nebula\FinalProject\app\src\main\res\mipmap-anydpi-v26: Warning: This folder configuration (v26) is unnecessary; minSdkVersion is 26. Merge all the resources in this folder into mipmap-anydpi. [ObsoleteSdkInt]
+
+   Explanation for issues of type "ObsoleteSdkInt":
+   This check flags version checks that are not necessary, because the
+   minSdkVersion (or surrounding known API level) is already at least as high
+   as the version checked for.
+
+   Similarly, it also looks for resources in -vNN folders, such as values-v14
+   where the version qualifier is less than or equal to the minSdkVersion,
+   where the contents should be merged into the best folder.
+
+C:\Users\imuthukumar\Documents\CPNB\Nebula\FinalProject\app\src\main\res\values\colors.xml:4: Warning: The resource R.color.purple_200 appears to be unused [UnusedResources]
+    <color name="purple_200">#FFBB86FC</color>
+           ~~~~~~~~~~~~~~~~~
+C:\Users\imuthukumar\Documents\CPNB\Nebula\FinalProject\app\src\main\res\values\colors.xml:5: Warning: The resource R.color.purple_500 appears to be unused [UnusedResources]
+    <color name="purple_500">#FF7B2CF5</color>
+           ~~~~~~~~~~~~~~~~~
+C:\Users\imuthukumar\Documents\CPNB\Nebula\FinalProject\app\src\main\res\values\colors.xml:6: Warning: The resource R.color.purple_700 appears to be unused [UnusedResources]
+    <color name="purple_700">#FF5A1FB3</color>
+           ~~~~~~~~~~~~~~~~~
+C:\Users\imuthukumar\Documents\CPNB\Nebula\FinalProject\app\src\main\res\values\colors.xml:7: Warning: The resource R.color.teal_200 appears to be unused [UnusedResources]
+    <color name="teal_200">#FF03DAC5</color>
+           ~~~~~~~~~~~~~~~
+C:\Users\imuthukumar\Documents\CPNB\Nebula\FinalProject\app\src\main\res\values\colors.xml:8: Warning: The resource R.color.teal_700 appears to be unused [UnusedResources]
+    <color name="teal_700">#FF018786</color>
+           ~~~~~~~~~~~~~~~
+C:\Users\imuthukumar\Documents\CPNB\Nebula\FinalProject\app\src\main\res\values\colors.xml:9: Warning: The resource R.color.black appears to be unused [UnusedResources]
+    <color name="black">#FF000000</color>
+           ~~~~~~~~~~~~
+C:\Users\imuthukumar\Documents\CPNB\Nebula\FinalProject\app\src\main\res\values\colors.xml:10: Warning: The resource R.color.white appears to be unused [UnusedResources]
+    <color name="white">#FFFFFFFF</color>
+           ~~~~~~~~~~~~
+C:\Users\imuthukumar\Documents\CPNB\Nebula\FinalProject\app\src\main\res\values\colors.xml:13: Warning: The resource R.color.design_default_color_primary appears to be unused [UnusedResources]
+    <color name="design_default_color_primary">@color/purple_500</color>
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\imuthukumar\Documents\CPNB\Nebula\FinalProject\app\src\main\res\values\colors.xml:14: Warning: The resource R.color.design_default_color_primary_dark appears to be unused [UnusedResources]
+    <color name="design_default_color_primary_dark">@color/purple_700</color>
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\imuthukumar\Documents\CPNB\Nebula\FinalProject\app\src\main\res\values\colors.xml:15: Warning: The resource R.color.design_default_color_primary_variant appears to be unused [UnusedResources]
+    <color name="design_default_color_primary_variant">@color/purple_700</color>
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\imuthukumar\Documents\CPNB\Nebula\FinalProject\app\src\main\res\mipmap-anydpi-v26\ic_launcher.xml:2: Warning: The resource R.mipmap.ic_launcher appears to be unused [UnusedResources]
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+^
+C:\Users\imuthukumar\Documents\CPNB\Nebula\FinalProject\app\src\main\res\drawable\ic_launcher_background.xml:2: Warning: The resource R.drawable.ic_launcher_background appears to be unused [UnusedResources]
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+^
+C:\Users\imuthukumar\Documents\CPNB\Nebula\FinalProject\app\src\main\res\mipmap-anydpi-v26\ic_launcher_backup.xml:2: Warning: The resource R.mipmap.ic_launcher_backup appears to be unused [UnusedResources]
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+^
+C:\Users\imuthukumar\Documents\CPNB\Nebula\FinalProject\app\src\main\res\mipmap-anydpi-v26\ic_launcher_round.xml:2: Warning: The resource R.mipmap.ic_launcher_round appears to be unused [UnusedResources]
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+^
+C:\Users\imuthukumar\Documents\CPNB\Nebula\FinalProject\app\src\main\res\values\strings.xml:5: Warning: The resource R.string.nav_copilot_notebooks appears to be unused [UnusedResources]
+    <string name="nav_copilot_notebooks">Copilot Notebooks</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\imuthukumar\Documents\CPNB\Nebula\FinalProject\app\src\main\res\values\strings.xml:6: Warning: The resource R.string.nav_notebooks appears to be unused [UnusedResources]
+    <string name="nav_notebooks">Notebooks</string>
+            ~~~~~~~~~~~~~~~~~~~~
+C:\Users\imuthukumar\Documents\CPNB\Nebula\FinalProject\app\src\main\res\values\strings.xml:7: Warning: The resource R.string.nav_sticky_notes appears to be unused [UnusedResources]
+    <string name="nav_sticky_notes">Sticky Notes</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\imuthukumar\Documents\CPNB\Nebula\FinalProject\app\src\main\res\values\strings.xml:8: Warning: The resource R.string.nav_search appears to be unused [UnusedResources]
+    <string name="nav_search">Search</string>
+            ~~~~~~~~~~~~~~~~~
+C:\Users\imuthukumar\Documents\CPNB\Nebula\FinalProject\app\src\main\res\values\strings.xml:11: Warning: The resource R.string.create_new appears to be unused [UnusedResources]
+    <string name="create_new">Create new</string>
+            ~~~~~~~~~~~~~~~~~
+C:\Users\imuthukumar\Documents\CPNB\Nebula\FinalProject\app\src\main\res\values\strings.xml:12: Warning: The resource R.string.more_options appears to be unused [UnusedResources]
+    <string name="more_options">More options</string>
+            ~~~~~~~~~~~~~~~~~~~
+C:\Users\imuthukumar\Documents\CPNB\Nebula\FinalProject\app\src\main\res\values\strings.xml:13: Warning: The resource R.string.search appears to be unused [UnusedResources]
+    <string name="search">Search</string>
+            ~~~~~~~~~~~~~
+C:\Users\imuthukumar\Documents\CPNB\Nebula\FinalProject\app\src\main\res\values\strings.xml:14: Warning: The resource R.string.refresh appears to be unused [UnusedResources]
+    <string name="refresh">Refresh</string>
+            ~~~~~~~~~~~~~~
+C:\Users\imuthukumar\Documents\CPNB\Nebula\FinalProject\app\src\main\res\values\strings.xml:15: Warning: The resource R.string.menu appears to be unused [UnusedResources]
+    <string name="menu">Menu</string>
+            ~~~~~~~~~~~
+C:\Users\imuthukumar\Documents\CPNB\Nebula\FinalProject\app\src\main\res\values\strings.xml:18: Warning: The resource R.string.suggested_notebooks appears to be unused [UnusedResources]
+    <string name="suggested_notebooks">Suggested Notebooks</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\imuthukumar\Documents\CPNB\Nebula\FinalProject\app\src\main\res\values\strings.xml:19: Warning: The resource R.string.suggested_notebooks_subtitle appears to be unused [UnusedResources]
+    <string name="suggested_notebooks_subtitle">Get started on your new Notebook based on your recent focus areas and topics.</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\imuthukumar\Documents\CPNB\Nebula\FinalProject\app\src\main\res\values\strings.xml:20: Warning: The resource R.string.view_all appears to be unused [UnusedResources]
+    <string name="view_all">View all</string>
+            ~~~~~~~~~~~~~~~
+C:\Users\imuthukumar\Documents\CPNB\Nebula\FinalProject\app\src\main\res\values\strings.xml:21: Warning: The resource R.string.all appears to be unused [UnusedResources]
+    <string name="all">All</string>
+            ~~~~~~~~~~
+C:\Users\imuthukumar\Documents\CPNB\Nebula\FinalProject\app\src\main\res\values\strings.xml:22: Warning: The resource R.string.favorites appears to be unused [UnusedResources]
+    <string name="favorites">Favorites</string>
+            ~~~~~~~~~~~~~~~~
+C:\Users\imuthukumar\Documents\CPNB\Nebula\FinalProject\app\src\main\res\values\strings.xml:23: Warning: The resource R.string.shared_with_you appears to be unused [UnusedResources]
+    <string name="shared_with_you">Shared with you</string>
+            ~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\imuthukumar\Documents\CPNB\Nebula\FinalProject\app\src\main\res\values\strings.xml:26: Warning: The resource R.string.just_now appears to be unused [UnusedResources]
+    <string name="just_now">Just now</string>
+            ~~~~~~~~~~~~~~~
+C:\Users\imuthukumar\Documents\CPNB\Nebula\FinalProject\app\src\main\res\values\strings.xml:27: Warning: The resource R.string.yesterday appears to be unused [UnusedResources]
+    <string name="yesterday">Yesterday</string>
+            ~~~~~~~~~~~~~~~~
+C:\Users\imuthukumar\Documents\CPNB\Nebula\FinalProject\app\src\main\res\values\strings.xml:28: Warning: The resource R.string.today appears to be unused [UnusedResources]
+    <string name="today">Today</string>
+            ~~~~~~~~~~~~
+C:\Users\imuthukumar\Documents\CPNB\Nebula\FinalProject\app\src\main\res\values\strings.xml:31: Warning: The resource R.string.private_notebook appears to be unused [UnusedResources]
+    <string name="private_notebook">Private notebook</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\imuthukumar\Documents\CPNB\Nebula\FinalProject\app\src\main\res\values\strings.xml:32: Warning: The resource R.string.shared_notebook appears to be unused [UnusedResources]
+    <string name="shared_notebook">Shared notebook</string>
+            ~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\imuthukumar\Documents\CPNB\Nebula\FinalProject\app\src\main\res\values\strings.xml:33: Warning: The resource R.string.list_view appears to be unused [UnusedResources]
+    <string name="list_view">List view</string>
+            ~~~~~~~~~~~~~~~~
+C:\Users\imuthukumar\Documents\CPNB\Nebula\FinalProject\app\src\main\res\values\strings.xml:34: Warning: The resource R.string.grid_view appears to be unused [UnusedResources]
+    <string name="grid_view">Grid view</string>
+            ~~~~~~~~~~~~~~~~
+C:\Users\imuthukumar\Documents\CPNB\Nebula\FinalProject\app\src\main\res\values\strings.xml:35: Warning: The resource R.string.voice_search appears to be unused [UnusedResources]
+    <string name="voice_search">Voice search</string>
+            ~~~~~~~~~~~~~~~~~~~
+C:\Users\imuthukumar\Documents\CPNB\Nebula\FinalProject\app\src\main\res\values\strings.xml:38: Warning: The resource R.string.search_placeholder appears to be unused [UnusedResources]
+    <string name="search_placeholder">Search notebooks, pages, and notes</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\imuthukumar\Documents\CPNB\Nebula\FinalProject\app\src\main\res\values\strings.xml:39: Warning: The resource R.string.recent_searches appears to be unused [UnusedResources]
+    <string name="recent_searches">Recent searches</string>
+            ~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\imuthukumar\Documents\CPNB\Nebula\FinalProject\app\src\main\res\values\strings.xml:40: Warning: The resource R.string.no_results_found appears to be unused [UnusedResources]
+    <string name="no_results_found">No results found</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\imuthukumar\Documents\CPNB\Nebula\FinalProject\app\src\main\res\values\strings.xml:41: Warning: The resource R.string.no_results_subtitle appears to be unused [UnusedResources]
+    <string name="no_results_subtitle">Try searching for different keywords or check your spelling</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\imuthukumar\Documents\CPNB\Nebula\FinalProject\app\src\main\res\values\strings.xml:42: Warning: The resource R.string.search_across_notebooks appears to be unused [UnusedResources]
+    <string name="search_across_notebooks">Search across all your notebooks</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\imuthukumar\Documents\CPNB\Nebula\FinalProject\app\src\main\res\values\strings.xml:43: Warning: The resource R.string.search_subtitle appears to be unused [UnusedResources]
+    <string name="search_subtitle">Find pages, notes, and content quickly</string>
+            ~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\imuthukumar\Documents\CPNB\Nebula\FinalProject\app\src\main\res\values\strings.xml:46: Warning: The resource R.string.recent_pages appears to be unused [UnusedResources]
+    <string name="recent_pages">Recent pages</string>
+            ~~~~~~~~~~~~~~~~~~~
+C:\Users\imuthukumar\Documents\CPNB\Nebula\FinalProject\app\src\main\res\values\strings.xml:47: Warning: The resource R.string.notebook_list appears to be unused [UnusedResources]
+    <string name="notebook_list">Notebook list</string>
+            ~~~~~~~~~~~~~~~~~~~~
+C:\Users\imuthukumar\Documents\CPNB\Nebula\FinalProject\app\src\main\res\values\strings.xml:48: Warning: The resource R.string.new_notebook appears to be unused [UnusedResources]
+    <string name="new_notebook">New notebook</string>
+            ~~~~~~~~~~~~~~~~~~~
+C:\Users\imuthukumar\Documents\CPNB\Nebula\FinalProject\app\src\main\res\values\strings.xml:51: Warning: The resource R.string.camera appears to be unused [UnusedResources]
+    <string name="camera">Camera</string>
+            ~~~~~~~~~~~~~
+C:\Users\imuthukumar\Documents\CPNB\Nebula\FinalProject\app\src\main\res\values\strings.xml:52: Warning: The resource R.string.edit appears to be unused [UnusedResources]
+    <string name="edit">Edit</string>
+            ~~~~~~~~~~~
+C:\Users\imuthukumar\Documents\CPNB\Nebula\FinalProject\app\src\main\res\values\strings.xml:53: Warning: The resource R.string.checkbox appears to be unused [UnusedResources]
+    <string name="checkbox">Checkbox</string>
+            ~~~~~~~~~~~~~~~
+C:\Users\imuthukumar\Documents\CPNB\Nebula\FinalProject\app\src\main\res\values\strings.xml:56: Warning: The resource R.string.error_loading_data appears to be unused [UnusedResources]
+    <string name="error_loading_data">Error loading data</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\imuthukumar\Documents\CPNB\Nebula\FinalProject\app\src\main\res\values\strings.xml:57: Warning: The resource R.string.error_network appears to be unused [UnusedResources]
+    <string name="error_network">Network error. Please try again.</string>
+            ~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "UnusedResources":
+   Unused resources make applications larger and slow down builds.
+
+
+   The unused resource check can ignore tests. If you want to include
+   resources that are only referenced from tests, consider packaging them in a
+   test source set instead.
+
+   You can include test sources in the unused resource check by setting the
+   system property lint.unused-resources.include-tests =true, and to exclude
+   them (usually for performance reasons), use
+   lint.unused-resources.exclude-tests =true.
+   ,
+
+0 errors, 69 warnings
